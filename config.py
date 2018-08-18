@@ -82,9 +82,9 @@ misc_arg.add_argument('--tb_port', type=int, default=12345)
 
 def get_args(group_name=None, parse_unknown=False):
     if parse_unknown:
-        args, unknown = parser.parse_known_args()
+        args, unknown = parser.parse_known_args(args=[])
     else:
-        args = parser.parse_args()
+        args = parser.parse_args(args=[])
 
     ##############################
     # Preprocess or filter args
